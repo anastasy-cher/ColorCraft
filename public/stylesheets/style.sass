@@ -1,0 +1,73 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    // border: 1px solid
+    font-family: 'Montserrat', sans-serif
+
+@mixin flex
+    display: flex
+    align-items: center
+    justify-content: center
+
+#principal
+    height: 100vh
+    display: flex
+    background-image: url('../images/fondo-inicio.jpg')
+    background-position: center center
+    #right
+        width: 50%
+        @include flex
+        flex-direction: column
+        h1
+            font-size: 20px
+
+    #left
+        width: 50%
+        @include flex
+        
+        #formulario
+            border-radius: 5px
+            padding: 2rem
+            background: #ffffff
+            height: 90%
+            width: 70%
+            @include flex
+            #caja
+                height: 50%
+                width: 100%
+                @include flex
+                flex-direction: column
+                justify-content: space-between
+                input
+                    width: 100%
+                    border: none
+                    border-bottom: 1px solid grey
+                    &:focus
+                        outline: none
+                        border-bottom: 2px solid #1473e6
+                p
+                    font-size: 14px
+                    a
+                        text-decoration: none
+                        color: #1473e6
+                        font-size: 14px
+                button
+                    background: #1473e6
+                    color: white
+                    padding: .6rem 1.2rem
+                    border: none
+                    border-radius: 30px
+                    cursor: pointer
+                    &:hover
+                        background: #125fbd
+
+@media only screen and (max-width: 768px)
+    #right
+        display: none !important
+    #left
+        width: 100% !important
+        #formulario
+            width: 100% !important
+            height: 100% !important
+

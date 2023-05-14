@@ -1,8 +1,89 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
-a {
-  color: #00B7FF;
+#principal {
+  height: 100vh;
+  display: flex;
+  background-image: url("../images/fondo-inicio.jpg");
+  background-position: center center;
 }
+#principal #right {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#principal #right h1 {
+  font-size: 20px;
+}
+#principal #left {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#principal #left #formulario {
+  border-radius: 5px;
+  padding: 2rem;
+  background: #ffffff;
+  height: 90%;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#principal #left #formulario #caja {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#principal #left #formulario #caja input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid grey;
+}
+#principal #left #formulario #caja input:focus {
+  outline: none;
+  border-bottom: 2px solid #1473e6;
+}
+#principal #left #formulario #caja p {
+  font-size: 14px;
+}
+#principal #left #formulario #caja p a {
+  text-decoration: none;
+  color: #1473e6;
+  font-size: 14px;
+}
+#principal #left #formulario #caja button {
+  background: #1473e6;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+#principal #left #formulario #caja button:hover {
+  background: #125fbd;
+}
+
+@media only screen and (max-width: 768px) {
+  #right {
+    display: none !important;
+  }
+  #left {
+    width: 100% !important;
+  }
+  #left #formulario {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}/*# sourceMappingURL=style.css.map */
