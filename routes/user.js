@@ -11,4 +11,12 @@ router.get('/signup', function(req, res, next) {
   res.render('auth/signup.ejs')
 });
 
+router.get('/', function(req, res, next) {
+  res.render('inicio.ejs')
+});
+
+router.get('/generar', function(req, res, next) {
+  res.render('generar.ejs')
+});
+
 module.exports = router;

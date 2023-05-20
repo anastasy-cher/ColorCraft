@@ -1,0 +1,58 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    border: 1px solid
+    font-family: 'Montserrat', sans-serif
+    // font-family: 'Pacifico', cursive
+
+@mixin flex
+    display: flex
+    align-items: center
+    justify-content: center
+
+#principal
+    height: 100vh
+    #menu
+        padding: 1rem
+        padding-left: 40%
+        height: 20%
+        @include flex
+        justify-content: space-around
+        #colores
+            width: 40%
+            height: 100%
+            @include flex
+            justify-content: space-between
+            div
+                height: 50px
+                width: 50px
+                border-radius: 50%
+        button
+            background: #000
+            color: white
+            padding: .6rem 1.2rem
+            border: none
+            cursor: pointer
+            &:hover
+                background: #125fbd
+
+    #rectangulos
+        display: flex
+        justify-content: space-evenly
+        height: 80%
+        div
+            height: 100%
+            width: 23%
+            @include flex
+
+            p
+                width: 40%
+                height: 5%
+                background: #ffffff
+                color: #000
+
+
+
+
+        

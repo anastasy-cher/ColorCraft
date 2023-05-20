@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 1px solid;
+  font-family: "Montserrat", sans-serif;
+}
+
+#principal {
+  height: 100vh;
+}
+#principal #menu {
+  padding: 1rem;
+  padding-left: 40%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+}
+#principal #menu #colores {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+#principal #menu #colores div {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+#principal #menu button {
+  background: #000;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  cursor: pointer;
+}
+#principal #menu button:hover {
+  background: #125fbd;
+}
+#principal #rectangulos {
+  display: flex;
+  justify-content: space-evenly;
+  height: 80%;
+}
+#principal #rectangulos div {
+  height: 100%;
+  width: 23%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#principal #rectangulos div p {
+  width: 40%;
+  height: 5%;
+  background: #ffffff;
+  color: #000;
+}/*# sourceMappingURL=generar.css.map */
