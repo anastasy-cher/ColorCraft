@@ -9,6 +9,9 @@ const userRouter = require('./routes/user');
 
 const app = express();
 
+// Requerimos para haer la conexion, despues de crear la app
+const pool = require("./config/conexion")
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');

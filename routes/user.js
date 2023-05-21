@@ -7,8 +7,8 @@ router.get('/login', function(req, res, next) {
   res.render('auth/login.ejs')
 });
 
-router.get('/signup', function(req, res, next) {
-  res.render('auth/signup.ejs')
+router.get('/registrarse', function(req, res, next) {
+  res.render('auth/registro.ejs')
 });
 
 router.get('/', function(req, res, next) {
