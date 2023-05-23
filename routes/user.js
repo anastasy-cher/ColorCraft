@@ -3,11 +3,11 @@ const express = require('express');
 const router = express.Router();
 
 
-router.get('/login', function(req, res, next) {
+router.get('/acceder', function(req, res, next) {
   res.render('auth/login.ejs')
 });
 
-router.get('/registrarse', function(req, res, next) {
+router.get('/registro', function(req, res, next) {
   res.render('auth/registro.ejs')
 });
 
@@ -18,5 +18,10 @@ router.get('/', function(req, res, next) {
 router.get('/generar', function(req, res, next) {
   res.render('generar.ejs')
 });
+
+// Recibimos datos de registro
+router.post('/datos_registro', function(req, res, next) {
+  console.log(req.body)
+})
 
 module.exports = router;

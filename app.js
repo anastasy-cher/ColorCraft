@@ -3,6 +3,8 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+// Para cookies(pa recibir)
+const express_session = require('express-session')
 
 // const indexRouter = require('./routes/index');
 const userRouter = require('./routes/user');
@@ -11,6 +13,10 @@ const app = express();
 
 // Requerimos para haer la conexion, despues de crear la app
 const pool = require("./config/conexion")
+
+// Almacenar cookies en la bd(para guardar)
+const session_mysql = require('express-mysql-session')(express_session)
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

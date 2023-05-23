@@ -23,14 +23,15 @@
         </div>
         <div id="left">
             <div class="animate__fadeInRight" id="formulario">
-                <div id="caja">
+
+                <form method="post" action="/datos_registro" id="caja">
                     <h1>Crear una cuenta</h1>
-                    <p>¿Ya tienes una cuenta? <a href="/login">Iniciar sesión</a></p>
-                    <input type="text" placeholder="Nombre" name="" id="">
-                    <input type="email" placeholder="Dirección de correo electrónico" name="" id="">
-                    <input type="password" placeholder="Contraseña" name="" id="">
-                    <button>Continuar</button>
-                </div>
+                    <p>¿Ya tienes una cuenta? <a href="/acceder">Iniciar sesión</a></p>
+                    <input type="text" placeholder="Nombre" name="name" id="">
+                    <input type="email" placeholder="Dirección de correo electrónico" name="email" id="">
+                    <input type="password" placeholder="Contraseña" name="password" id="">
+                    <button type="submit">Continuar</button>
+                </form>
             </div>
         </div>
     </section>
