@@ -2,6 +2,8 @@
 const express = require('express');
 const router = express.Router();
 
+const passport = require('passport')
+
 
 router.get('/acceder', function(req, res, next) {
   res.render('auth/login.ejs')
@@ -20,8 +22,9 @@ router.get('/generar', function(req, res, next) {
 });
 
 // Recibimos datos de registro
-router.post('/datos_registro', function(req, res, next) {
-  console.log(req.body)
-})
+router.post('/datos_registro', passport.authenticate('local.registro', {
+  successRedirect:'/',
+  failureRedirect:'/registro'
+}))
 
 module.exports = router;
