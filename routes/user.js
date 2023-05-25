@@ -23,8 +23,29 @@ router.get('/generar', function(req, res, next) {
 
 // Recibimos datos de registro
 router.post('/datos_registro', passport.authenticate('local.registro', {
-  successRedirect:'/',
+  successRedirect:'/generar',
   failureRedirect:'/registro'
 }))
+router.get('/corporativo', function(req, res, next) {
+  res.render('corporativo.ejs')
+});
+router.get('/icons', function(req, res, next) {
+  res.render('icons.ejs')
+});
+router.get('/teoria', function(req, res, next) {
+  res.render('teoria.ejs')
+});
+router.get('/web', function(req, res, next) {
+  res.render('web.ejs')
+});
+router.get("/logout" ,(req,res) =>{
+  req.logOut( function(err){
+    if(err){
+      return next(err)
+    }
+  })
+  res.redirect("/")
+})
+
 
 module.exports = router;

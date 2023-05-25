@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+}
+
+nav {
+  border-bottom: 2px solid #c4c4c4;
+  height: 15vh;
+  display: flex;
+  padding: 0 2rem;
+}
+nav #left, nav #right {
+  width: 50%;
+}
+nav #left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: start;
+}
+nav #right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+nav #right .boton {
+  color: black;
+  padding: 0.3rem 0.6rem;
+}
+nav #right .boton:hover {
+  background: #f5f5f5;
+  transition: 0.5s;
+}
+nav #right #user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav #right #user #logout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav #right #user #logout img {
+  width: 70%;
+  height: 70%;
+}
+nav #right #acceder {
+  background: #125fbd;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  cursor: pointer;
+}
+nav #right #acceder:hover {
+  background: #000;
+}/*# sourceMappingURL=nav.css.map */
