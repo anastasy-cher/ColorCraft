@@ -37,6 +37,21 @@ passport.use('local.registro', new strategy({
 }))
 // Cookie creada
 
+// exolicar!!!
+passport.use("local.signin", new strategy({
+    usernameField:"email",
+    passwordField:"password",
+    passReqToCallback:true
+}, async (req,username,password,done) =>{
+
+    console.log(username,password)
+
+    const [result] = await pool.query("select * from users where email = ?",[username])
+
+    return done(null,result[0])
+
+}))
+
 // Pasamos la cookie al navegador
 passport.serializeUser((user,done)=>{
     console.log("serial")
@@ -52,3 +67,4 @@ passport.deserializeUser(async(id,done) =>{
     console.log(user)
     done(null,user[0])
 })
+

@@ -3,6 +3,8 @@ const express = require('express');
 const router = express.Router();
 
 const passport = require('passport')
+const pool = require('../config/conexion')
+const encrypt = require('../config/encrypt')
 
 
 router.get('/acceder', function(req, res, next) {
@@ -47,5 +49,37 @@ router.get("/logout" ,(req,res) =>{
   res.redirect("/")
 })
 
+// Recibimos datos para validar/enviar login
+router.post("/login", async (req,res, next)=>{
 
+  console.log(req.body)
+
+  // Comprobamos email insertado en la bd
+  const [email_bd] = await pool.query("select * from users where email = ?",[req.body.email])
+
+  if (email_bd.length>0){
+
+      const user = email_bd[0]
+      // Comprobamos las contraseñas insertada y guardada en la bd
+      const validar = await encrypt.desencriptar(req.body.password,user.password)
+
+      console.log(validar)
+
+      if (validar){
+        // Pasamos los datos a estrategia en passport para crear la cookie
+          await passport.authenticate("local.signin")
+
+          (req,res,next)
+          // Como no hay respuesta para .then en validar.js, entra en catch para redirigir con la cookie creada
+
+      }else{
+          console.log("Intento de iniciar sesion fallido. La contraseña incorrecta.",req.body.email)
+          res.json({"error":true})
+      }
+
+  }else{
+    console.log("Intento de iniciar sesion fallido. El email no existe en la BD. ",req.body.email)
+    res.json({"error":true})
+  }
+})
 module.exports = router;
