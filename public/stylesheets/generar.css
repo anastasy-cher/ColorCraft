@@ -30,14 +30,14 @@
   width: 50px;
   border-radius: 50%;
 }
-#principal #menu button {
+#principal #menu #boton {
   background: #000;
   color: white;
   padding: 0.6rem 1.2rem;
   border: none;
   cursor: pointer;
 }
-#principal #menu button:hover {
+#principal #menu #boton:hover {
   background: #125fbd;
 }
 #principal #rectangulos {

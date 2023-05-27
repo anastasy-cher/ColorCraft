@@ -5,6 +5,7 @@ const router = express.Router();
 const passport = require('passport')
 const pool = require('../config/conexion')
 const encrypt = require('../config/encrypt')
+const triada = require('../public/javascripts/triada')
 
 
 router.get('/acceder', function(req, res, next) {
@@ -19,8 +20,15 @@ router.get('/', function(req, res, next) {
   res.render('inicio.ejs')
 });
 
-router.get('/generar', function(req, res, next) {
-  res.render('generar.ejs')
+router.get('/generar', async function(req, res, next) {
+
+// Uso de la función para generar una paleta utilizando la regla de triada
+const paletaTriada = triada()
+console.log(paletaTriada);
+
+
+
+  res.render('generar.ejs', {paletaTriada})
 });
 
 // Recibimos datos de registro

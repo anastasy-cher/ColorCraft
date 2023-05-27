@@ -34,6 +34,6 @@ boton.addEventListener("click",async () => {
 
     }catch (e){
         console.log(e)
-        window.location.href = "/"
+        window.location.href = "/generar"
     }
 })
