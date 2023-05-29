@@ -6,26 +6,6 @@
   text-decoration: none;
 }
 
-#colores {
-  width: 30%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  justify-content: space-between;
-  transition: 0.5s;
-}
-#colores div {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-}
-
-.info {
-  display: none;
-  text-align: center;
-}
-
 #menu {
   padding-left: 45%;
   height: 10%;
@@ -33,6 +13,53 @@
   align-items: center;
   justify-content: center;
   justify-content: space-around;
+}
+#menu #colores {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+#menu #colores .caja {
+  position: relative;
+  height: 100%;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#menu #colores .caja .circle {
+  height: 40px;
+  width: 43px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#menu #colores .caja .info {
+  background: #ffffff;
+  z-index: 2;
+  position: absolute;
+  bottom: -80%;
+  height: 90%;
+  display: none;
+  text-align: center;
+  width: 100%;
+}
+#menu #colores .caja .info button {
+  width: 100%;
+  height: 50%;
+  cursor: pointer;
+  font-size: 12px;
+  border: none;
+}
+#menu #colores .caja .info input {
+  height: 50%;
+  outline: none;
+  border: none;
+  width: 90%;
+  text-align: center;
 }
 #menu #boton {
   background: #000;

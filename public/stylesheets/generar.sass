@@ -16,30 +16,28 @@
     #bloque1
         height: 90vh
         overflow: hidden
-        #texto
-
-            
-            h1,span
-                font-family: 'Krona One', sans-serif
-                font-size: 84px
-    #rectangulos
-        padding-top: 2rem
-        height: 50vh
-        background: #fffff
-        @include flex
-        justify-content: space-evenly
-        div
-            padding: 2%
-            height: 100%
-            width: 23%
-            @include flex
-            align-items: start
-            justify-content: start
-            p
-                font-family: 'Krona One', sans-serif
-                letter-spacing: 2px
-                font-size: 22px
-
+        #fondo
+            position: relative
+            #texto
+                width: 50%
+                height: 50%
+                padding: 2%
+                padding-right: 8%
+                @include flex
+                flex-direction: column
+                justify-content: space-between
+                align-items: start
+                position: absolute
+                top: 20%
+                left: 5%
+                h1,span
+                    font-family: 'Krona One', sans-serif
+                    font-size: 74px
+                p
+                    line-height: 28px
+            svg
+                z-index: -1
+                    
 
 
 

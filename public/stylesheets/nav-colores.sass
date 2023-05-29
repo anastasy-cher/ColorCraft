@@ -12,25 +12,51 @@
     align-items: center
     justify-content: center
 
-#colores
-    width: 30%
-    height: 100%
-    @include flex
-    justify-content: space-between
-    transition: .5s
-    div
-        height: 40px
-        width: 40px
-        border-radius: 50%
-.info 
-        display: none
-        text-align: center
-
 #menu
     padding-left: 45%
     height: 10%
     @include flex
     justify-content: space-around
+
+    #colores
+        width: 35%
+        height: 100%
+        @include flex
+        justify-content: space-between
+        .caja
+            position: relative
+            height: 100%
+            width: 95%
+            @include flex
+            flex-direction: column
+            .circle
+                height: 40px
+                width: 43px
+                border-radius: 50%
+                cursor: pointer
+            .info
+                background: #ffffff
+                z-index: 2
+                position: absolute
+                bottom: -80%
+                height: 90%
+                display: none
+                text-align: center
+                width: 100%
+                button
+                    width: 100%
+                    height: 50%
+                    cursor: pointer
+                    font-size: 12px
+                    border: none
+                input
+                    height: 50%
+                    outline: none
+                    border: none
+                    width: 90%
+                    text-align: center
+        
+
         
     #boton
         background: #000

@@ -1,0 +1,31 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    // border: 1px solid
+    font-family: 'Montserrat', sans-serif
+    text-decoration: none
+    // font-family: 'Pacifico', cursive
+
+@mixin flex
+    display: flex
+    align-items: center
+    justify-content: center
+
+#rectangulos
+    padding-top: 5%
+    padding-bottom: 2%
+    height: 50vh
+    @include flex
+    justify-content: space-evenly
+    div
+        padding: 2%
+        height: 100%
+        width: 23%
+        @include flex
+        align-items: start
+        justify-content: start
+        p
+            font-family: 'Krona One', sans-serif
+            letter-spacing: 2px
+            font-size: 22px

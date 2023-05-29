@@ -1,29 +1,42 @@
 <div id="menu">
     <div id="colores">
-        <div id="circulo-1" class="circle" style="background: <%= paletaTriada[0] %>" onclick="toggleInfo(0)"></div>
-        <div id="circulo-2" style="background: <%= paletaTriada[1] %>" onclick="toggleInfo(1)"></div>
-        <div id="circulo-3" style="background: <%= paletaTriada[2] %>" onclick="toggleInfo(2)"></div>
-        <div id="circulo-4" style="background: <%= paletaTriada[3] %>" onclick="toggleInfo(3)"></div>
+        <div class="caja">
+            <div id="circulo-1" class="circle" style="background: <%= paletaTriada[0] %>" onclick="toggleInfo(0)"></div>
+
+            <div id="info-0" class="info" >
+                <button onclick="copiarAlPortapapeles(0)">Copiar</button>
+                <input type="text" value="<%= paletaTriada[0] %>">
+            </div>
+
+        </div>
+        <div class="caja">
+            <div id="circulo-2" class="circle" style="background: <%= paletaTriada[1] %>" onclick="toggleInfo(1)"></div>
+
+            <div id="info-1" class="info">
+                <button onclick="copiarAlPortapapeles(1)">Copiar</button>
+                <input type="text" value="<%= paletaTriada[1] %>">
+            </div>
+        </div>
+
+        <div class="caja">
+            <div id="circulo-3" class="circle" style="background: <%= paletaTriada[2] %>" onclick="toggleInfo(2)"></div>
+            <div id="info-2" class="info">
+                <button onclick="copiarAlPortapapeles(2)">Copiar</button>
+                <input type="text" value="<%= paletaTriada[2] %>">
+            </div>
+        </div>
+
+        <div class="caja">
+            <div id="circulo-4" class="circle" style="background: <%= paletaTriada[3] %>" onclick="toggleInfo(3)"></div>
+
+            <div id="info-3" class="info">
+                <button onclick="copiarAlPortapapeles(3)">Copiar</button>
+                <input type="text" value="<%= paletaTriada[3] %>">
+            </div>
+        </div>
     </div>
-    <div id="info-0" class="info" style="background: #ffffff;">
-        <input type="text" value="<%= paletaTriada[0] %>">
-        <div id="info-color" style="background: <%= paletaTriada[0] %>; height: 50px; width:50px;"></div>
-      </div>
-
-      <div id="info-1" class="info">
-        <h2>Información del círculo 2</h2>
-        <p>Esta es la información del segundo círculo.</p>
-      </div>
-
-      <div id="info-2" class="info">
-        <h2>Información del círculo 3</h2>
-        <p>Esta es la información del tercer círculo.</p>
-      </div>
-
-      <div id="info-3" class="info">
-        <h2>Información del círculo 4</h2>
-        <p>Esta es la información del cuarto círculo.</p>
-      </div>
+    
+    <a href="">Guardar</a>
 
     <a id="boton" href="/generar">Generar</a>
 </div>
@@ -33,4 +46,24 @@
         const info = document.getElementById('info-' + circuloId);
         info.style.display = info.style.display === 'none' ? 'block' : 'none';
     }
-    </script>
+
+    function copiarAlPortapapeles(index) {
+        // Obtener el elemento input correspondiente al índice
+        const input = document.querySelector(`#info-${index} input`);
+
+        // Obtener el valor del campo de entrada
+        const texto = input.value;
+
+        // Usar la API del portapapeles para copiar el texto al portapapeles
+        navigator.clipboard.writeText(texto)
+            .then(() => {
+            // Mostrar un mensaje de éxito en la consola y una alerta en el navegador
+            console.log("Texto copiado al portapapeles: " + texto);
+            alert("Texto copiado al portapapeles: " + texto);
+            })
+            .catch((error) => {
+            // Mostrar un mensaje de error en la consola si ocurre algún error
+            console.error("Error al copiar al portapapeles: ", error);
+            });
+        }
+</script>

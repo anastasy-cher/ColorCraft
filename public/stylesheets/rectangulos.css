@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+}
+
+#rectangulos {
+  padding-top: 5%;
+  padding-bottom: 2%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+#rectangulos div {
+  padding: 2%;
+  height: 100%;
+  width: 23%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: start;
+  justify-content: start;
+}
+#rectangulos div p {
+  font-family: "Krona One", sans-serif;
+  letter-spacing: 2px;
+  font-size: 22px;
+}/*# sourceMappingURL=rectangulos.css.map */

@@ -19,6 +19,9 @@
     <link rel="stylesheet" href="/stylesheets/nav.css">
     <!-- Estilo nav-colores -->
     <link rel="stylesheet" href="/stylesheets/nav-colores.css">
+    <!-- Estilo rectangulos -->
+    <link rel="stylesheet" href="/stylesheets/rectangulos.css">
+
 
     <title>Generar</title>
 </head>
@@ -31,8 +34,14 @@
         
          
         <div id="bloque1" style="background: <%= paletaTriada[0] %>d0;">
-            <div id="texto">
-                <!-- <h1 style="color: <%= paletaTriada[1] %>;">Color<span style="color: <%= paletaTriada[2] %>">Craft</span></h1> -->
+            <div id="fondo">
+                <div id="texto" style="background: <%= paletaTriada[0] %>; box-shadow: 4px 4px 4px 4px <%= paletaTriada[0] %>">
+                    <h1 style="color: <%= paletaTriada[2] %>;">Color<span style="color: <%= paletaTriada[3] %>">Craft</span>
+                    </h1>
+
+                    <p style="color:<%= paletaTriada[1] %> ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi amet corrupti dolore repudiandae repellendus saepe velit natus error veritatis doloribus tempora blanditiis dolores rem eaque sapiente, fugit itaque porro molestias?</p>
+                    
+                </div>
                 <%- include('./partials/olas.ejs') %>
 
                 
