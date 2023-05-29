@@ -17,30 +17,34 @@
     <link rel="stylesheet" href="/stylesheets/generar.css">
     <!-- Estilo nav -->
     <link rel="stylesheet" href="/stylesheets/nav.css">
+    <!-- Estilo nav-colores -->
+    <link rel="stylesheet" href="/stylesheets/nav-colores.css">
 
     <title>Generar</title>
 </head>
 <body>
-    <style>
-
-        .info {
-          display: none;
-          text-align: center;
-        }
-      </style>
-
     <%- include('./partials/nav.ejs') %>
+
     <section id="principal">
+
         <%- include('./partials/nav-colores.ejs') %>
+        
          
-        <div id="rectangulos" style="background: <%= paletaTriada[0] %>;">
+        <div id="bloque1" style="background: <%= paletaTriada[0] %>d0;">
             <div id="texto">
-                <h1 style="color: <%= paletaTriada[1] %>;">Color<span style="color: <%= paletaTriada[2]  %>">Craft</span></h1>
-                <%- include('./partials/gradiente.ejs') %>
+                <!-- <h1 style="color: <%= paletaTriada[1] %>;">Color<span style="color: <%= paletaTriada[2] %>">Craft</span></h1> -->
+                <%- include('./partials/olas.ejs') %>
+
+                
+                
             </div>
 
+            
        </div>
+       <%- include('./partials/rectangulos.ejs') %>
     </section>
+
+    
     
 </body>
 </html>

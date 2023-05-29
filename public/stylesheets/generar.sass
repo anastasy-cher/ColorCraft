@@ -4,7 +4,6 @@
     box-sizing: border-box
     // border: 1px solid
     font-family: 'Montserrat', sans-serif
-    // font-family: 'Pacifico', cursive
 
 @mixin flex
     display: flex
@@ -12,55 +11,37 @@
     justify-content: center
 
 #principal
-    height: 90vh
-    #menu
-        padding-left: 45%
-        height: 10%
-        @include flex
-        justify-content: space-around
-        #colores
-            width: 30%
-            height: 100%
-            @include flex
-            justify-content: space-between
-            transition: .5s
-            div
-                height: 40px
-                width: 40px
-                border-radius: 50%
-            
-        #boton
-            background: #000
-            color: white
-            padding: .6rem 1.2rem
-            border: none
-            cursor: pointer
-            &:hover
-                background: #125fbd
+    height: 100vh
 
-    #rectangulos
-        height: 90%
-        display: flex
-        align-items: center
-        justify-content: center
+    #bloque1
+        height: 90vh
         overflow: hidden
         #texto
-            // background: #ffffff
-            padding: .4rem
+
             
             h1,span
                 font-family: 'Krona One', sans-serif
                 font-size: 84px
-        // div
-        //     height: 100%
-        //     width: 23%
-        //     @include flex
+    #rectangulos
+        padding-top: 2rem
+        height: 50vh
+        background: #fffff
+        @include flex
+        justify-content: space-evenly
+        div
+            padding: 2%
+            height: 100%
+            width: 23%
+            @include flex
+            align-items: start
+            justify-content: start
+            p
+                font-family: 'Krona One', sans-serif
+                letter-spacing: 2px
+                font-size: 22px
 
-        //     p
-        //         width: 40%
-        //         height: 5%
-        //         background: #ffffff
-        //         color: #000
+
+
 
 
 
