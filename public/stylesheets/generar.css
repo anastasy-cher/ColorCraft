@@ -6,28 +6,28 @@
 }
 
 #principal {
-  height: 100vh;
+  height: 90vh;
 }
 #principal #menu {
-  padding: 1rem;
-  padding-left: 40%;
-  height: 20%;
+  padding-left: 45%;
+  height: 10%;
   display: flex;
   align-items: center;
   justify-content: center;
   justify-content: space-around;
 }
 #principal #menu #colores {
-  width: 40%;
+  width: 30%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   justify-content: space-between;
+  transition: 0.5s;
 }
 #principal #menu #colores div {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
 }
 #principal #menu #boton {
@@ -41,20 +41,16 @@
   background: #125fbd;
 }
 #principal #rectangulos {
-  display: flex;
-  justify-content: space-evenly;
-  height: 80%;
-}
-#principal #rectangulos div {
-  height: 100%;
-  width: 23%;
+  height: 90%;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
-#principal #rectangulos div p {
-  width: 40%;
-  height: 5%;
-  background: #ffffff;
-  color: #000;
+#principal #rectangulos #texto {
+  padding: 0.4rem;
+}
+#principal #rectangulos #texto h1, #principal #rectangulos #texto span {
+  font-family: "Krona One", sans-serif;
+  font-size: 84px;
 }/*# sourceMappingURL=generar.css.map */

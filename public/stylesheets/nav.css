@@ -8,7 +8,7 @@
 
 nav {
   border-bottom: 2px solid #c4c4c4;
-  height: 15vh;
+  height: 10vh;
   display: flex;
   padding: 0 2rem;
 }
@@ -30,6 +30,7 @@ nav #right {
 nav #right .boton {
   color: black;
   padding: 0.3rem 0.6rem;
+  font-size: 18px;
 }
 nav #right .boton:hover {
   background: #f5f5f5;

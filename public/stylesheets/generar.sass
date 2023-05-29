@@ -12,22 +12,23 @@
     justify-content: center
 
 #principal
-    height: 100vh
+    height: 90vh
     #menu
-        padding: 1rem
-        padding-left: 40%
-        height: 20%
+        padding-left: 45%
+        height: 10%
         @include flex
         justify-content: space-around
         #colores
-            width: 40%
+            width: 30%
             height: 100%
             @include flex
             justify-content: space-between
+            transition: .5s
             div
-                height: 50px
-                width: 50px
+                height: 40px
+                width: 40px
                 border-radius: 50%
+            
         #boton
             background: #000
             color: white
@@ -38,19 +39,28 @@
                 background: #125fbd
 
     #rectangulos
+        height: 90%
         display: flex
-        justify-content: space-evenly
-        height: 80%
-        div
-            height: 100%
-            width: 23%
-            @include flex
+        align-items: center
+        justify-content: center
+        overflow: hidden
+        #texto
+            // background: #ffffff
+            padding: .4rem
+            
+            h1,span
+                font-family: 'Krona One', sans-serif
+                font-size: 84px
+        // div
+        //     height: 100%
+        //     width: 23%
+        //     @include flex
 
-            p
-                width: 40%
-                height: 5%
-                background: #ffffff
-                color: #000
+        //     p
+        //         width: 40%
+        //         height: 5%
+        //         background: #ffffff
+        //         color: #000
 
 
 

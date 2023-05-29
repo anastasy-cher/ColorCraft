@@ -1,0 +1,36 @@
+<div id="menu">
+    <div id="colores">
+        <div id="circulo-1" class="circle" style="background: <%= paletaTriada[0] %>" onclick="toggleInfo(0)"></div>
+        <div id="circulo-2" style="background: <%= paletaTriada[1] %>" onclick="toggleInfo(1)"></div>
+        <div id="circulo-3" style="background: <%= paletaTriada[2] %>" onclick="toggleInfo(2)"></div>
+        <div id="circulo-4" style="background: <%= paletaTriada[3] %>" onclick="toggleInfo(3)"></div>
+    </div>
+    <div id="info-0" class="info" style="background: #ffffff;">
+        <input type="text" value="<%= paletaTriada[0] %>">
+        <div id="info-color" style="background: <%= paletaTriada[0] %>; height: 50px; width:50px;"></div>
+      </div>
+
+      <div id="info-1" class="info">
+        <h2>Información del círculo 2</h2>
+        <p>Esta es la información del segundo círculo.</p>
+      </div>
+
+      <div id="info-2" class="info">
+        <h2>Información del círculo 3</h2>
+        <p>Esta es la información del tercer círculo.</p>
+      </div>
+
+      <div id="info-3" class="info">
+        <h2>Información del círculo 4</h2>
+        <p>Esta es la información del cuarto círculo.</p>
+      </div>
+
+    <a id="boton" href="/generar">Generar</a>
+</div>
+<script>
+    // Función para mostrar/ocultar el apartado de texto
+    function toggleInfo(circuloId) {
+        const info = document.getElementById('info-' + circuloId);
+        info.style.display = info.style.display === 'none' ? 'block' : 'none';
+    }
+    </script>
