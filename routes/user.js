@@ -91,4 +91,9 @@ router.post("/login", async (req,res, next)=>{
   }
 })
 
+router.get('/guardadas', function(req, res, next) {
+
+  console.log(req.query)
+  res.render("guardadas.ejs")
+});
 module.exports = router;
