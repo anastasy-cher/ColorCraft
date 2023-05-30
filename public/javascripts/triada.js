@@ -19,8 +19,12 @@ function generarPaletaTriada() {
   
   // Función para generar un color hexadecimal aleatorio
   function generarColorAleatorio() {
-    const color = Math.floor(Math.random() * 16777215).toString(16);
-    return "#" + ("000000" + color).slice(-6);
+    const coloresVivos = ["FF0000", "FFA500", "FFFF00", "00FF00", "0000FF", "800080"]; // Lista de colores vivos
+  
+    const indiceAleatorio = Math.floor(Math.random() * coloresVivos.length); // Generar un índice aleatorio dentro del rango de la lista de colores vivos
+    const color = coloresVivos[indiceAleatorio]; // Obtener el color correspondiente al índice aleatorio
+  
+    return "#" + color;
   }
   
   // Función para convertir un color hexadecimal a componentes RGB

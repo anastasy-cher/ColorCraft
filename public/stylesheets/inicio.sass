@@ -58,6 +58,42 @@
                     font-size: 14px
                     color: #072E46
 
-
-
+@media only screen and (max-width: 768px) 
+    #principal 
+        @include flex
+        flex-direction: column
     
+        #left
+            display: none
+        
+        #rigth
+            padding: 2rem
+            width: 100%
+            h1 
+                font-size: 18px
+            
+            span
+                font-size: 20px
+            
+            #box
+                @include flex
+                justify-content: space-around
+                padding: 1rem
+                height: 90vh !important
+                #buttons 
+                    height: 15%
+                    border: 1px solid
+                    #box-buttons
+                        justify-content: space-between !important 
+                        flex-direction: column
+                        display: flex !important
+                        flex-direction: row
+                        border: 1px solid
+
+                        a
+                            text-align: center
+                            width: 48%
+                            font-size: 18px
+                    
+                    #login 
+                        font-size: 12px

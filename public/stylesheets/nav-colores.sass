@@ -14,12 +14,12 @@
 
 #menu
     padding-left: 45%
-    height: 10%
+    height: 8%
     @include flex
     justify-content: space-around
 
     #colores
-        width: 35%
+        width: 40%
         height: 100%
         @include flex
         justify-content: space-between
@@ -30,8 +30,8 @@
             @include flex
             flex-direction: column
             .circle
-                height: 40px
-                width: 43px
+                height: 38px
+                width: 41px
                 border-radius: 50%
                 cursor: pointer
             .info
@@ -44,11 +44,15 @@
                 text-align: center
                 width: 100%
                 button
+                    background: #ffffff
                     width: 100%
                     height: 50%
                     cursor: pointer
                     font-size: 12px
                     border: none
+                    &:hover
+                        background: #000
+                        color: #ffffff
                 input
                     height: 50%
                     outline: none
@@ -66,4 +70,27 @@
         cursor: pointer
         &:hover
             background: #125fbd
+
+@media (max-width: 768px) 
+  #menu 
+    padding-left: 5%
+
+    #colores 
+      .caja 
+        width: 45%
         
+@media (max-width: 480px) 
+  #menu 
+    padding-left: 2%
+
+    #colores 
+      .caja 
+        width: 90%
+
+        .circle 
+          height: 30px
+          width: 32px
+        
+
+        .info 
+          bottom: -100%    

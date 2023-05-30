@@ -5,6 +5,7 @@
     // border: 1px solid
     font-family: 'Montserrat', sans-serif
     text-decoration: none
+    list-style: none
     // font-family: 'Pacifico', cursive
 
 @mixin flex
@@ -50,5 +51,88 @@ nav
             &:hover
                 background: #000
 
-          
+nav ul li
+    display: inline-block
+    line-height: 80px
+    margin: 0 5px
 
+nav ul li a
+    color: orange
+    font-size: 20px
+    padding: 7px 13px
+
+.checkbtn
+    font-size: 30px
+    color: white
+    float: right
+    line-height: 80px
+    cursor: pointer
+    display: none
+
+#check
+    display: none
+
+@media only screen and (max-width: 768px)
+    nav
+        height: 12vh
+    #left,
+    #right 
+        width: 100%
+        text-align: center
+    
+    #right
+        flex-direction: column
+        @include flex
+        align-items: end !important
+    
+    .boton 
+        margin-top: 1rem
+    
+    #acceder 
+        margin-top: 1rem
+    
+    #user,
+    #acceder 
+        flex-direction: column
+    
+    #user h4 
+        margin-top: 0.5rem
+    
+    #logout 
+        margin-top: 0.5rem
+    
+    #acceder 
+        display: none
+
+    .checkbtn
+        display: block
+    
+    ul
+        z-index: 1
+        position: fixed
+        width: 100%
+        height: 100vh
+        background: #ffffff
+        top: 80px
+        left: -100%
+        text-align: center
+        transition: .5s
+    
+    nav ul li
+        display: block
+        margin: 50px 0
+        line-height: 90px
+    
+    nav ul li a
+        font-size: 20px
+    
+    #check:checked ~ ul
+        left: 0%
+        opacity: .8
+    
+    section
+        height: 87.7vh
+    
+    section img
+        width: 93rem
+        transform: translateX(-550px)

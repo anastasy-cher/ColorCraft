@@ -8,14 +8,14 @@
 
 #menu {
   padding-left: 45%;
-  height: 10%;
+  height: 8%;
   display: flex;
   align-items: center;
   justify-content: center;
   justify-content: space-around;
 }
 #menu #colores {
-  width: 35%;
+  width: 40%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -32,8 +32,8 @@
   flex-direction: column;
 }
 #menu #colores .caja .circle {
-  height: 40px;
-  width: 43px;
+  height: 38px;
+  width: 41px;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -48,11 +48,16 @@
   width: 100%;
 }
 #menu #colores .caja .info button {
+  background: #ffffff;
   width: 100%;
   height: 50%;
   cursor: pointer;
   font-size: 12px;
   border: none;
+}
+#menu #colores .caja .info button:hover {
+  background: #000;
+  color: #ffffff;
 }
 #menu #colores .caja .info input {
   height: 50%;
@@ -70,4 +75,28 @@
 }
 #menu #boton:hover {
   background: #125fbd;
+}
+
+@media (max-width: 768px) {
+  #menu {
+    padding-left: 5%;
+  }
+  #menu #colores .caja {
+    width: 45%;
+  }
+}
+@media (max-width: 480px) {
+  #menu {
+    padding-left: 2%;
+  }
+  #menu #colores .caja {
+    width: 90%;
+  }
+  #menu #colores .caja .circle {
+    height: 30px;
+    width: 32px;
+  }
+  #menu #colores .caja .info {
+    bottom: -100%;
+  }
 }/*# sourceMappingURL=nav-colores.css.map */

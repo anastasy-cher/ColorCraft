@@ -67,4 +67,53 @@
 #principal #rigth #box #buttons #login {
   font-size: 14px;
   color: #072E46;
+}
+
+@media only screen and (max-width: 768px) {
+  #principal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #principal #left {
+    display: none;
+  }
+  #principal #rigth {
+    padding: 2rem;
+    width: 100%;
+  }
+  #principal #rigth h1 {
+    font-size: 18px;
+  }
+  #principal #rigth span {
+    font-size: 20px;
+  }
+  #principal #rigth #box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    padding: 1rem;
+    height: 90vh !important;
+  }
+  #principal #rigth #box #buttons {
+    height: 15%;
+    border: 1px solid;
+  }
+  #principal #rigth #box #buttons #box-buttons {
+    justify-content: space-between !important;
+    flex-direction: column;
+    display: flex !important;
+    flex-direction: row;
+    border: 1px solid;
+  }
+  #principal #rigth #box #buttons #box-buttons a {
+    text-align: center;
+    width: 48%;
+    font-size: 18px;
+  }
+  #principal #rigth #box #buttons #login {
+    font-size: 12px;
+  }
 }/*# sourceMappingURL=inicio.css.map */
