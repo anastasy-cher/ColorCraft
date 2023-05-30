@@ -91,9 +91,20 @@ router.post("/login", async (req,res, next)=>{
   }
 })
 
-router.get('/guardadas', function(req, res, next) {
+router.get('/guardadas', async function(req, res, next) {
 
   console.log(req.query)
-  res.render("guardadas.ejs")
+
+  const paleta = {
+    color1: req.query.color0,
+    color2: req.query.color1,
+    color3: req.query.color2,
+    color4: req.query.color3,
+    id_user: req.user.id
+  }
+  // Prevenimos posible inyeccion a MySQL
+  await pool.query("INSERT INTO colors SET ?",[paleta])
+
+  res.redirect('/generar')
 });
 module.exports = router;
