@@ -37,6 +37,21 @@
   width: 90%;
   line-height: 28px;
 }
-#principal #bloque1 #fondo svg {
-  z-index: -1;
+
+@media only screen and (max-width: 767px) {
+  #fondo {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #fondo #texto {
+    position: static !important;
+    height: 20% !important;
+    width: 100% !important;
+  }
+  #fondo #texto h1, #fondo #texto span {
+    font-size: 48px !important;
+  }
+  #fondo #texto p {
+    font-size: 12px !important;
+  }
 }/*# sourceMappingURL=generar.css.map */

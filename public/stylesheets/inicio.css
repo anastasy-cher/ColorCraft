@@ -99,14 +99,12 @@
   }
   #principal #rigth #box #buttons {
     height: 15%;
-    border: 1px solid;
   }
   #principal #rigth #box #buttons #box-buttons {
     justify-content: space-between !important;
     flex-direction: column;
     display: flex !important;
     flex-direction: row;
-    border: 1px solid;
   }
   #principal #rigth #box #buttons #box-buttons a {
     text-align: center;
