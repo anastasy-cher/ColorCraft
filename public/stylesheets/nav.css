@@ -13,19 +13,18 @@ nav {
   display: flex;
   padding: 0 2rem;
 }
-nav #left, nav #right {
-  width: 50%;
-}
 nav #left {
   display: flex;
   align-items: center;
   justify-content: center;
   justify-content: start;
+  width: 58%;
 }
 nav #right {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 42%;
   justify-content: space-between;
 }
 nav #right .boton {
@@ -41,6 +40,8 @@ nav #right #user {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 40%;
+  justify-content: space-between;
 }
 nav #right #user #logout {
   display: flex;
@@ -62,12 +63,18 @@ nav #right #acceder:hover {
   background: #000;
 }
 
+nav ul {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
 nav ul li {
   display: inline-block;
   line-height: 80px;
   margin: 0 5px;
 }
-
 nav ul li a {
   color: orange;
   font-size: 20px;
@@ -93,14 +100,22 @@ nav ul li a {
   }
   #left,
   #right {
-    width: 100%;
+    width: 50%;
     text-align: center;
   }
   #right {
-    flex-direction: column;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: row-reverse;
+  }
+  #right #user {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row !important;
+    justify-content: space-between !important;
     align-items: end !important;
   }
   .boton {
@@ -112,9 +127,6 @@ nav ul li a {
   #user,
   #acceder {
     flex-direction: column;
-  }
-  #user h4 {
-    margin-top: 0.5rem;
   }
   #logout {
     margin-top: 0.5rem;
@@ -147,12 +159,5 @@ nav ul li a {
   #check:checked ~ ul {
     left: 0%;
     opacity: 0.8;
-  }
-  section {
-    height: 87.7vh;
-  }
-  section img {
-    width: 93rem;
-    transform: translateX(-550px);
   }
 }/*# sourceMappingURL=nav.css.map */

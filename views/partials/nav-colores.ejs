@@ -35,14 +35,17 @@
             </div>
         </div>
     </div>
-    
-    <% if (user) { %>
-        <!-- Codificamos el # a %23 con encodeURIComponent -->
-        <a href="/guardadas/?color0=<%=encodeURIComponent(paletaTriada[0])%>&color1=<%=encodeURIComponent(paletaTriada[1])%>&color2=<%=encodeURIComponent(paletaTriada[2])%>&color3=<%=encodeURIComponent(paletaTriada[3])%>">Guardar</a>
-    <% } %>
+    <div id="botones">
 
-    <a id="boton" href="/generar">Generar</a>
-</div>
+        <% if (user) { %>
+            <!-- Codificamos el # a %23 con encodeURIComponent -->
+            <a href="/guardadas/?color0=<%=encodeURIComponent(paletaTriada[0])%>&color1=<%=encodeURIComponent(paletaTriada[1])%>&color2=<%=encodeURIComponent(paletaTriada[2])%>&color3=<%=encodeURIComponent(paletaTriada[3])%>"><i class="fa-solid fa-heart"></i></a>
+        <% } %>
+        
+            <a id="boton" href="/generar">Generar</a>
+        </div>
+    </div>
+    
 <script>
     // Función para mostrar/ocultar el apartado de texto
     function toggleInfo(circuloId) {

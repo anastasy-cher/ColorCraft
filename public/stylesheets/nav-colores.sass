@@ -13,53 +13,64 @@
     justify-content: center
 
 #menu
-    padding-left: 45%
     height: 8%
+    padding: 0 2rem
     @include flex
-    justify-content: space-around
+    justify-content: end
 
     #colores
-        width: 40%
+      height: 100%
+      width: 22%
+      @include flex
+      justify-content: space-between
+      .caja
+        position: relative
+        width: 25%
         height: 100%
         @include flex
-        justify-content: space-between
-        .caja
-            position: relative
-            height: 100%
-            width: 95%
-            @include flex
-            flex-direction: column
-            .circle
-                height: 38px
-                width: 41px
-                border-radius: 50%
-                cursor: pointer
-            .info
-                background: #ffffff
-                z-index: 2
-                position: absolute
-                bottom: -80%
-                height: 90%
-                display: none
-                text-align: center
-                width: 100%
-                button
-                    background: #ffffff
-                    width: 100%
-                    height: 50%
-                    cursor: pointer
-                    font-size: 12px
-                    border: none
-                    &:hover
-                        background: #000
-                        color: #ffffff
-                input
-                    height: 50%
-                    outline: none
-                    border: none
-                    width: 90%
-                    text-align: center
-        
+        flex-direction: column
+        .circle
+          height: 38px
+          width: 41px
+          border-radius: 50%
+          cursor: pointer
+        .info
+          background: #ffffff
+          z-index: 2
+          position: absolute
+          bottom: -80%
+          height: 95%
+          display: none
+          text-align: center
+          width: 100%
+          button
+              background: #ffffff
+              width: 100%
+              height: 50%
+              cursor: pointer
+              font-size: 12px
+              border: none
+              &:hover
+                  background: #000
+                  color: #ffffff
+          input
+              height: 50%
+              outline: none
+              border: none
+              width: 90%
+              text-align: center
+
+    #botones
+
+      padding-left: 3%
+      height: 100%
+      width: 20%
+      @include flex
+      justify-content: space-between
+    a
+      i
+        color: #ff0000
+        font-size: 34px     
 
         
     #boton
@@ -71,26 +82,14 @@
         &:hover
             background: #125fbd
 
-@media (max-width: 768px) 
-  #menu 
-    padding-left: 5%
-
-    #colores 
-      .caja 
-        width: 45%
-        
-@media (max-width: 480px) 
-  #menu 
-    padding-left: 2%
-
-    #colores 
-      .caja 
-        width: 90%
-
-        .circle 
-          height: 30px
-          width: 32px
-        
-
-        .info 
-          bottom: -100%    
+@media only screen and (max-width: 767px) 
+  #menu
+    padding: 0 !important 
+    #colores
+      width: 50% !important
+      .caja
+        .circle
+          height: 28px
+          width: 31px 
+    #botones
+      width: 50% !important

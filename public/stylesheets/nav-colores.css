@@ -7,16 +7,16 @@
 }
 
 #menu {
-  padding-left: 45%;
   height: 8%;
+  padding: 0 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  justify-content: space-around;
+  justify-content: end;
 }
 #menu #colores {
-  width: 40%;
   height: 100%;
+  width: 22%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,8 +24,8 @@
 }
 #menu #colores .caja {
   position: relative;
+  width: 25%;
   height: 100%;
-  width: 95%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,7 +42,7 @@
   z-index: 2;
   position: absolute;
   bottom: -80%;
-  height: 90%;
+  height: 95%;
   display: none;
   text-align: center;
   width: 100%;
@@ -66,6 +66,19 @@
   width: 90%;
   text-align: center;
 }
+#menu #botones {
+  padding-left: 3%;
+  height: 100%;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+#menu a i {
+  color: #ff0000;
+  font-size: 34px;
+}
 #menu #boton {
   background: #000;
   color: white;
@@ -77,26 +90,18 @@
   background: #125fbd;
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   #menu {
-    padding-left: 5%;
+    padding: 0 !important;
   }
-  #menu #colores .caja {
-    width: 45%;
-  }
-}
-@media (max-width: 480px) {
-  #menu {
-    padding-left: 2%;
-  }
-  #menu #colores .caja {
-    width: 90%;
+  #menu #colores {
+    width: 50% !important;
   }
   #menu #colores .caja .circle {
-    height: 30px;
-    width: 32px;
+    height: 28px;
+    width: 31px;
   }
-  #menu #colores .caja .info {
-    bottom: -100%;
+  #menu #botones {
+    width: 50% !important;
   }
 }/*# sourceMappingURL=nav-colores.css.map */
