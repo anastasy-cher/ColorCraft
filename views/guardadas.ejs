@@ -7,6 +7,10 @@
     <title>Guardadas</title>
 </head>
 <body>
+    <% for( let i = 0; i < guardadas.length; i++ ) { %>
+        <h1><%= guardadas[i].color1 %></h1>
+        <div style="background:<%= guardadas[i].color1%>; height: 50px; width: 50px;"></div>
+    <% } %>
     
 </body>
 </html>

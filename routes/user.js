@@ -12,6 +12,12 @@ router.get('/acceder', function(req, res, next) {
   res.render('auth/login.ejs')
 });
 
+router.get('/usuario', async function(req, res, next) {
+  const [guardadas] = await pool.query("select * from colors where id_user = ?", req.user.id)
+  // console.log(guardadas)
+  res.render('guardadas.ejs', {guardadas})
+});
+
 router.get('/registro', function(req, res, next) {
   res.render('auth/registro.ejs')
 });
@@ -36,18 +42,14 @@ router.post('/datos_registro', passport.authenticate('local.registro', {
   successRedirect:'/generar',
   failureRedirect:'/registro'
 }))
-router.get('/corporativo', function(req, res, next) {
-  res.render('corporativo.ejs')
-});
+
 router.get('/icons', function(req, res, next) {
   res.render('icons.ejs')
 });
 router.get('/teoria', function(req, res, next) {
   res.render('teoria.ejs')
 });
-router.get('/web', function(req, res, next) {
-  res.render('web.ejs')
-});
+
 router.get("/logout" ,(req,res) =>{
   req.logOut( function(err){
     if(err){
