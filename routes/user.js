@@ -22,6 +22,11 @@ router.get('/registro', function(req, res, next) {
   res.render('auth/registro.ejs')
 });
 
+router.get('/delete/:id', async function(req, res, next) {
+  await pool.query('delete from colors where id = ?', req.params.id)
+  res.redirect('/usuario')
+});
+
 router.get('/', function(req, res, next) {
   res.render('inicio.ejs')
 });
