@@ -97,3 +97,48 @@
                     
                     #login 
                         font-size: 12px
+
+@media (min-width: 768px) and (max-width: 1023px)
+    #principal
+        background-size: cover
+        @include flex
+        flex-direction: column
+    
+        #left
+            display: none
+        
+        #rigth
+            padding: 2rem
+            width: 100%
+            h1 
+                font-size: 38px
+            
+            span
+                font-size: 40px !important
+            p
+                font-size: 32px
+
+            
+            #box
+                @include flex
+                justify-content: space-around
+                padding: 3rem
+                height: 90vh !important
+                #buttons 
+                    height: 20%
+                    #box-buttons
+                        height: 50% !important
+                        justify-content: space-between !important 
+                        flex-direction: column
+                        display: flex !important
+                        flex-direction: row
+
+                        a
+                            text-align: center
+                            width: 48%
+                            @include flex
+                            font-size: 28px
+                            height: 100% !important
+                    
+                    #login 
+                        font-size: 28px !important
