@@ -24,12 +24,11 @@ nav #right {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 42%;
   justify-content: space-between;
+  width: 42%;
 }
 nav #right .boton {
   color: black;
-  padding: 0.3rem 0.6rem;
   font-size: 18px;
   transition: 0.5s;
 }
@@ -41,12 +40,11 @@ nav #right #user {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50%;
+  width: 40%;
   justify-content: space-between;
 }
 nav #right #user #nombre {
   font-size: 18px;
-  padding: 2px 7px;
 }
 nav #right #user #nombre:hover {
   border-bottom: 2px solid green;
@@ -57,15 +55,18 @@ nav #right #user #nombre h4 {
   font-weight: 400;
 }
 nav #right #user #logout {
-  padding: 0;
+  padding: 0.6rem 1.2rem;
 }
 nav #right #user #logout i {
-  font-size: 30px;
+  font-size: 20px;
   color: black;
 }
 nav #right #user #logout i:hover {
   color: red;
   transition: 0.5s;
+}
+nav #right #user #logout h4 {
+  display: none;
 }
 nav #right #user #logout {
   display: flex;
@@ -88,14 +89,13 @@ nav #right #acceder:hover {
 }
 
 nav ul {
-  width: 40%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   justify-content: space-between;
 }
 nav ul li {
-  display: inline-block;
   line-height: 80px;
   margin: 0 5px;
 }
@@ -107,8 +107,7 @@ nav ul li a {
 .checkbtn {
   font-size: 30px;
   color: white;
-  float: right;
-  line-height: 80px;
+  float: left;
   cursor: pointer;
   display: none;
 }
@@ -147,7 +146,6 @@ nav ul li a {
     font-weight: 200;
     font-size: 26px;
     color: black;
-    background: yellow;
   }
   .boton {
     margin-top: 1rem;
@@ -162,33 +160,63 @@ nav ul li a {
   #logout {
     margin-top: 0.5rem;
   }
-  #acceder {
-    display: none;
-  }
   .checkbtn {
     display: block;
   }
   ul {
+    left: 0;
     z-index: 1;
     position: fixed;
-    width: 100%;
+    width: 100% !important;
     height: 100vh;
-    background: #ffffff;
-    top: 80px;
-    left: -100%;
+    background: white;
+    top: -100%;
     text-align: center;
     transition: 0.5s;
-  }
-  nav ul li {
-    display: block;
-    margin: 50px 0;
-    line-height: 90px;
+    flex-direction: column !important;
   }
   nav ul li a {
     font-size: 20px;
   }
   #check:checked ~ ul {
-    left: 0%;
-    opacity: 0.8;
+    left: 0;
+    padding-top: 10%;
+    top: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse !important;
+    justify-content: start !important;
+  }
+  #check:checked ~ ul li {
+    margin: 5% 0;
+  }
+  #check:checked ~ ul li a {
+    border-bottom: 1px solid;
+  }
+  #check:checked ~ ul #acceder {
+    background: white;
+    color: black;
+    border-bottom: 1px solid;
+  }
+  #check:checked ~ ul #user {
+    width: 60%;
+    flex-direction: column !important;
+  }
+  #check:checked ~ ul #user #nombre {
+    border-bottom: 1px solid green;
+  }
+  #check:checked ~ ul #user a {
+    margin-top: 10%;
+  }
+  #check:checked ~ ul #user #logout h4 {
+    display: flex !important;
+    font-size: 20px;
+    font-weight: 400;
+    border-bottom: 1px solid red;
+    padding: 7px 13px;
+  }
+  #check:checked ~ ul #user #logout i {
+    display: none;
   }
 }/*# sourceMappingURL=nav.css.map */

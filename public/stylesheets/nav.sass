@@ -25,11 +25,10 @@ nav
         width: 58%
     #right
         @include flex
-        width: 42%
         justify-content: space-between
+        width: 42%
         .boton
             color: black
-            padding: .3rem .6rem
             font-size: 18px
             transition: .5s
             
@@ -38,12 +37,10 @@ nav
                 color: white
         #user
             @include flex
-            width: 50%
+            width: 40%
             justify-content: space-between
             #nombre
                 font-size: 18px
-                padding: 2px 7px
-                tra
                 &:hover
                     border-bottom: 2px solid green
                 h4
@@ -51,13 +48,15 @@ nav
                     color: black
                     font-weight: 400
             #logout
-                padding: 0
+                padding: .6rem 1.2rem
                 i
-                    font-size: 30px
+                    font-size: 20px
                     color: black
                     &:hover
                         color: red
                         transition: 0.5s
+                h4
+                    display: none
                     
 
             #logout
@@ -75,11 +74,10 @@ nav
                 background: #000
 nav
     ul
-        width: 40%
+        width: 100%
         @include flex
         justify-content: space-between
         li
-            display: inline-block
             line-height: 80px
             margin: 0 5px
             a
@@ -89,8 +87,7 @@ nav
 .checkbtn
     font-size: 30px
     color: white
-    float: right
-    line-height: 80px
+    float: left
     cursor: pointer
     display: none
 
@@ -99,13 +96,13 @@ nav
 
 @media only screen and (max-width: 768px)
     nav
+
         height: 12vh
         padding: 0 4% !important
 
         #left
             width: 50% !important
 
-    
     #right
         width: 50% !important
         @include flex
@@ -120,15 +117,11 @@ nav
             h4
                 color: black
 
-            
             #logout
                 font-weight: 200
                 font-size: 26px
                 color: black
-                background: yellow
 
-
-    
     .boton 
         margin-top: 1rem
     
@@ -142,31 +135,57 @@ nav
     #logout 
         margin-top: 0.5rem
     
-    #acceder 
-        display: none
 
     .checkbtn
         display: block
     
     ul
+        left: 0
         z-index: 1
         position: fixed
-        width: 100%
+        width: 100% !important
         height: 100vh
-        background: #ffffff
-        top: 80px
-        left: -100%
+        background: white
+        top: -100%
         text-align: center
         transition: .5s
-    
-    nav ul li
-        display: block
-        margin: 50px 0
-        line-height: 90px
+        flex-direction: column !important
     
     nav ul li a
         font-size: 20px
     
     #check:checked ~ ul
-        left: 0%
-        opacity: .8
+        left:0
+        padding-top: 10%
+        top: 10vh
+        @include flex 
+        flex-direction: column-reverse !important
+        justify-content: start !important
+        li
+            margin: 5% 0
+            a
+                border-bottom: 1px solid
+        #acceder
+            background: white
+            color: black
+            border-bottom: 1px solid
+
+        #user
+            width: 60%
+            flex-direction: column !important
+
+            #nombre
+                border-bottom: 1px solid green
+
+            a
+                margin-top: 10%
+
+            #logout
+                h4
+                    display: flex !important
+                    font-size: 20px
+                    font-weight: 400
+                    border-bottom: 1px solid red
+                    padding: 7px 13px 
+                i
+                    display: none

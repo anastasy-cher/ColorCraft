@@ -6,25 +6,28 @@
         </div>
     </div>
     <div id="right">
-
+        
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn"><i class="fas fa-bars" style="color: #000000;"></i></label>
         <ul>
             <li><a class="boton" href="/icons">Iconos</a></li>
             <li><a class="boton" href="/teoria">Teoria</a></li>
+            
+        <% if (user) { %>
+            <div id="user">
+                <a href="/usuario" id="nombre"><h4> <%= user.name %></h4></a>
+                <a href="/logout" id="logout"><h4>Salir</h4><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+    
+            </div>
+            
+        <% } else { %>
+            <li><a class="boton" href="/registro">Registro</a></li>
+            <li><a id="acceder" href="/acceder">Acceder</a></li>
+            
+        <% } %>
+
         </ul>
 
-    <% if (user) { %>
-        <div id="user">
-            <a href="/usuario" id="nombre"><h4><%= user.name %></h4></a>
-            <a href="/logout" id="logout"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
-
-        </div>
-        
-    <% } else { %>
-        <a id="acceder" href="/acceder">Acceder</a>
-        
-    <% } %>
          
     </div>
 </nav>
