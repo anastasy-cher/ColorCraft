@@ -4,13 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap" rel="stylesheet"><!-- Krona One -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/stylesheets/guardadas.css">
+
+    <!--  Font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <!-- Estilo nav -->
+    <link rel="stylesheet" href="/stylesheets/nav.css">
+
     <title>Guardadas</title>
 </head>
 <body>
-    <% for( let i = 0; i < guardadas.length; i++ ) { %>
-        <h1><%= guardadas[i].color1 %></h1>
-        <div style="background:<%= guardadas[i].color1%>; height: 50px; width: 50px;"></div>
-    <% } %>
-    
+    <%- include('./partials/nav.ejs') %>
+    <section id="principal">
+        <% for( let i = 0; i < guardadas.length; i++ ) { %>
+            <div class="caja">
+                <div class="cuatro-colores">
+
+                    <div class="color" style="background:<%= guardadas[i].color1%>;"><p><%= guardadas[i].color1 %></p></div>
+                    <div class="color" style="background:<%= guardadas[i].color2%>;"><p><%= guardadas[i].color2 %></p></div>
+                    <div class="color" style="background:<%= guardadas[i].color3%>;"><p><%= guardadas[i].color3 %></p></div>
+                    <div class="color" style="background:<%= guardadas[i].color4%>;"><p><%= guardadas[i].color4 %></p></div>
+
+                </div>
+                <div id="nombre">
+                    <h1><%= guardadas[i].name %></h1>
+                    <a href="">Añade el nombre</a>
+                </div>
+                <a href="" id="borrar"><i class="fa-solid fa-trash"></i></a>
+            </div>
+        <% } %>
+
+    </section>
 </body>
 </html>

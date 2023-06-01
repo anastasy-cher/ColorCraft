@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+}
+
+#principal {
+  padding: 2%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#principal .caja {
+  box-shadow: 10px 9px 20px -12px rgba(0, 0, 0, 0.75);
+  width: 48%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+}
+#principal .caja .cuatro-colores {
+  width: 30%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#principal .caja .cuatro-colores .color {
+  margin: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: flex-end;
+  justify-content: end;
+  padding: 3%;
+  width: 45%;
+  height: 45%;
+}
+#principal .caja .cuatro-colores .color p {
+  color: white;
+}
+#principal .caja #nombre a {
+  background: #000;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  cursor: pointer;
+}
+#principal .caja #nombre a:hover {
+  background: #125fbd;
+}
+#principal .caja #borrar i {
+  font-size: 28px;
+  color: black;
+  transition: 0.3s;
+}
+#principal .caja #borrar i:hover {
+  color: red;
+}
+
+@media only screen and (max-width: 767px) {
+  .caja {
+    width: 100% !important;
+    padding: 2% !important;
+  }
+  .cuatro-colores {
+    height: 70% !important;
+  }
+  .color {
+    width: 100% !important;
+    height: 25% !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .caja {
+    width: 100% !important;
+    padding: 2% !important;
+  }
+  .cuatro-colores {
+    height: 70% !important;
+  }
+  .color {
+    width: 100% !important;
+    height: 25% !important;
+  }
+}/*# sourceMappingURL=guardadas.css.map */
