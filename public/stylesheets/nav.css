@@ -219,4 +219,12 @@ nav ul li a {
   #check:checked ~ ul #user #logout i {
     display: none;
   }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  #left {
+    width: 30%;
+  }
+  #right {
+    width: 70% !important;
+  }
 }/*# sourceMappingURL=nav.css.map */

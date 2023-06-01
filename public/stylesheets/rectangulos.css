@@ -45,4 +45,15 @@
     margin-bottom: 10px;
     padding: 5% !important;
   }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  #rectangulos {
+    height: auto;
+    flex-wrap: wrap;
+  }
+  #rectangulos div {
+    width: 90%;
+    margin-bottom: 10px;
+    padding: 5% !important;
+  }
 }/*# sourceMappingURL=rectangulos.css.map */

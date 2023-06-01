@@ -110,4 +110,16 @@
   #menu a {
     padding-right: 13%;
   }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  #colores {
+    width: 40% !important;
+  }
+  #botones {
+    width: 30% !important;
+  }
+  #botones a {
+    padding-right: 10% !important;
+    font-size: 24px;
+  }
 }/*# sourceMappingURL=nav-colores.css.map */
