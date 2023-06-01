@@ -73,7 +73,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  justify-content: space-between;
+  justify-content: end;
+}
+#menu a {
+  padding-right: 50%;
 }
 #menu a i {
   color: #ff0000;
@@ -103,5 +106,8 @@
   }
   #menu #botones {
     width: 50% !important;
+  }
+  #menu a {
+    padding-right: 13%;
   }
 }/*# sourceMappingURL=nav-colores.css.map */
