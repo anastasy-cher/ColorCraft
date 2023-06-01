@@ -31,17 +31,41 @@ nav #right .boton {
   color: black;
   padding: 0.3rem 0.6rem;
   font-size: 18px;
+  transition: 0.5s;
 }
 nav #right .boton:hover {
-  background: #f5f5f5;
-  transition: 0.5s;
+  background: black;
+  color: white;
 }
 nav #right #user {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40%;
+  width: 50%;
   justify-content: space-between;
+}
+nav #right #user #nombre {
+  font-size: 18px;
+  padding: 2px 7px;
+}
+nav #right #user #nombre:hover {
+  border-bottom: 2px solid green;
+}
+nav #right #user #nombre h4 {
+  text-align: left;
+  color: black;
+  font-weight: 400;
+}
+nav #right #user #logout {
+  padding: 0;
+}
+nav #right #user #logout i {
+  font-size: 30px;
+  color: black;
+}
+nav #right #user #logout i:hover {
+  color: red;
+  transition: 0.5s;
 }
 nav #right #user #logout {
   display: flex;
@@ -96,13 +120,13 @@ nav ul li a {
 @media only screen and (max-width: 768px) {
   nav {
     height: 12vh;
+    padding: 0 4% !important;
   }
-  #left,
-  #right {
-    width: 50%;
-    text-align: center;
+  nav #left {
+    width: 50% !important;
   }
   #right {
+    width: 50% !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -115,7 +139,15 @@ nav ul li a {
     justify-content: center;
     flex-direction: row !important;
     justify-content: space-between !important;
-    align-items: end !important;
+  }
+  #right #user h4 {
+    color: black;
+  }
+  #right #user #logout {
+    font-weight: 200;
+    font-size: 26px;
+    color: black;
+    background: yellow;
   }
   .boton {
     margin-top: 1rem;

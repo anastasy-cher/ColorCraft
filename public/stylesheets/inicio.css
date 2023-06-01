@@ -9,6 +9,7 @@
   height: 100vh;
   display: flex;
   background-image: url("../images/fondo-inicio.jpg");
+  background-size: cover;
   background-position: center center;
 }
 #principal #rigth, #principal #left {
@@ -71,6 +72,7 @@
 
 @media only screen and (max-width: 768px) {
   #principal {
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -15,6 +15,7 @@
     height: 100vh
     display: flex
     background-image: url('../images/fondo-inicio.jpg')
+    background-size: cover
     background-position: center center
     #rigth, #left
         width: 50%
@@ -59,7 +60,8 @@
                     color: #072E46
 
 @media only screen and (max-width: 768px) 
-    #principal 
+    #principal
+        background-size: cover
         @include flex
         flex-direction: column
     

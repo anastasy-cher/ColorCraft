@@ -92,7 +92,7 @@
 
 @media only screen and (max-width: 767px) {
   #menu {
-    padding: 0 !important;
+    padding: 0 4% !important;
   }
   #menu #colores {
     width: 50% !important;
