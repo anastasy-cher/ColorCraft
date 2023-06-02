@@ -17,12 +17,27 @@
     @include flex
     flex-wrap: wrap
     justify-content: space-between
+    #sin-guardar
+        width: 100%
+        @include flex
+        flex-direction: column
+        h1
+            font-family: 'Krona One', sans-serif
+            padding: 5%
+        a
+            border: none
+            text-decoration: none
+            color: #ffffff
+            font-size: 20px
+            background: #000
+            padding: .6rem 1.2rem
     .caja
-        -webkit-box-shadow: 10px 9px 20px -12px rgba(0,0,0,0.75)
-        -moz-box-shadow: 10px 9px 20px -12px rgba(0,0,0,0.75)
-        box-shadow: 10px 9px 20px -12px rgba(0,0,0,0.75)
-        width: 48%
+        -webkit-box-shadow: 14px 12px 17px 0px rgba(196,196,196,1)
+        -moz-box-shadow: 14px 12px 17px 0px rgba(196,196,196,1)
+        box-shadow: 14px 12px 17px 0px rgba(196,196,196,1)
+        width: 45%
         height: 30%
+        margin: 2%
         @include flex
         justify-content: space-around
         .cuatro-colores
@@ -57,6 +72,9 @@
                 &:hover
                     color: red
 @media only screen and (max-width: 767px)
+    #sin-guardar h1
+        text-align: center
+        padding-bottom: 10% !important
     .caja
         width: 100% !important
         padding: 2% !important

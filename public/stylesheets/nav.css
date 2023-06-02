@@ -45,9 +45,10 @@ nav #right #user {
 }
 nav #right #user #nombre {
   font-size: 18px;
+  transition: 1s;
 }
 nav #right #user #nombre:hover {
-  border-bottom: 2px solid green;
+  border-bottom: 1px solid green;
 }
 nav #right #user #nombre h4 {
   text-align: left;

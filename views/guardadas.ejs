@@ -25,6 +25,15 @@
 <body>
     <%- include('./partials/nav.ejs') %>
     <section id="principal">
+
+        <% if (guardadas.length == 0) { %>
+
+            <div id="sin-guardar">
+                <h1>Aún no tienes paletas guardadas.</h1>
+                <a href="/generar">Generar</a>
+            </div>
+        <% } %>
+
         <% for( let i = 0; i < guardadas.length; i++ ) { %>
             <div class="caja">
                 <div class="cuatro-colores">

@@ -6,13 +6,14 @@ const passport = require('passport')
 const pool = require('../config/conexion')
 const encrypt = require('../config/encrypt')
 const triada = require('../public/javascripts/triada')
-
+// traemos solo la funcion
+const {isloggedin} = require('../config/security')
 
 router.get('/acceder', function(req, res, next) {
   res.render('auth/login.ejs')
 });
 
-router.get('/usuario', async function(req, res, next) {
+router.get('/usuario', isloggedin,async function(req, res, next) {
   const [guardadas] = await pool.query("select * from colors where id_user = ?", req.user.id)
   // console.log(guardadas)
   res.render('guardadas.ejs', {guardadas})
