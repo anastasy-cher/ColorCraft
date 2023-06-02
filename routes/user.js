@@ -36,9 +36,6 @@ router.get('/generar', async function(req, res, next) {
 // Uso de la función para generar una paleta utilizando la regla de triada
 const paletaTriada = triada()
 console.log(paletaTriada);
-
-
-
   res.render('generar.ejs', {paletaTriada})
 });
 
@@ -47,6 +44,10 @@ router.post('/datos_registro', passport.authenticate('local.registro', {
   successRedirect:'/generar',
   failureRedirect:'/registro'
 }))
+router.get('/editar-nombre/:id', function(req, res, next) {
+  let idpaleta = req.params.id
+  res.render('editar-nombre.ejs',{idpaleta})
+});
 
 router.get('/icons', function(req, res, next) {
   res.render('icons.ejs')
@@ -62,6 +63,13 @@ router.get("/logout" ,(req,res) =>{
     }
   })
   res.redirect("/")
+})
+
+router.post("/editar-nombre/:id",async (req,res) =>{
+
+  await pool.query('update colors set name_colors = ? where id = ?',[ req.body.nombre, req.params.id])
+  res.redirect("/usuario")
+
 })
 
 // Recibimos datos para validar/enviar login

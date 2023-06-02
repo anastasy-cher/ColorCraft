@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Krona One -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/stylesheets/editar-nombre.css">
+
+    <!--  Font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <!-- Estilo nav -->
+    <link rel="stylesheet" href="/stylesheets/nav.css">
+    <title>Cambiar nombre</title>
+</head>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <section id="principal">
+        <form method="post" action="/editar-nombre/<%= idpaleta %>" id="formulario">
+            <h1>Escribe abajo el nombre para la paleta guardada</h1>
+            <input type="text" name="nombre" placeholder="Escribe el nombre de la paleta aqui.">
+            <div id="botones">
+                <button>Guardar</button>
+                <a href="/usuario">Cancelar</a>
+            </div>
+        </form>
+    </section>
+
+    
+</body>
+</html>

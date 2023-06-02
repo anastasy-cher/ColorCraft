@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Krona One", sans-serif;
+}
+
+#principal {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#principal #formulario {
+  border: 1px solid;
+  height: 70%;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+#principal #formulario h1 {
+  text-align: center;
+  font-family: "Krona One", sans-serif;
+}
+#principal #formulario input {
+  padding: 3%;
+  outline: none;
+  width: 80%;
+}
+#principal #formulario input::-moz-placeholder {
+  font-family: "Krona One", sans-serif;
+}
+#principal #formulario input::placeholder {
+  font-family: "Krona One", sans-serif;
+}
+#principal #formulario #botones {
+  width: 80%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+}
+#principal #formulario #botones button, #principal #formulario #botones a {
+  height: 100%;
+  width: 35%;
+  cursor: pointer;
+  background: #000;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  font-family: "Krona One", sans-serif;
+  font-size: 16px;
+  transition: 0.4s;
+}
+#principal #formulario #botones a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#principal #formulario #botones a:hover {
+  background: red;
+}
+#principal #formulario #botones button:hover {
+  background: green;
+}/*# sourceMappingURL=editar-nombre.css.map */

@@ -1,0 +1,62 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    // border: 1px solid
+    font-family: 'Krona One', sans-serif
+
+@mixin flex
+    display: flex
+    align-items: center
+    justify-content: center
+
+#principal
+    height: 90vh
+    @include flex
+    #formulario
+        border: 1px solid
+        height: 70%
+        width: 40%
+        @include flex
+        flex-direction: column
+        justify-content: space-evenly
+        h1
+            text-align: center
+            font-family: 'Krona One', sans-serif
+        input
+            padding: 3%
+            outline: none
+            width: 80%
+            &::placeholder
+                font-family: 'Krona One', sans-serif
+        #botones
+            width: 80%
+            height: 10%
+            @include flex
+            justify-content: space-around
+            button, a
+                height: 100%
+                width: 35%
+                cursor: pointer
+                background: #000
+                color: white
+                padding: .6rem 1.2rem
+                border: none
+                font-family: 'Krona One', sans-serif
+                font-size: 16px
+                transition: .4s
+                
+            a
+                @include flex
+                &:hover
+                    background: red
+            button:hover
+                background: green
+
+@media only screen and (max-width: 767px)
+@media (min-width: 768px) and (max-width: 1023px)
+
+
+
+
+

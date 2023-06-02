@@ -7,7 +7,8 @@
     <!-- Google Fonts Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap" rel="stylesheet"><!-- Krona One -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+    <!-- Krona One -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
@@ -35,8 +36,11 @@
 
                 </div>
                 <div id="nombre">
-                    <h1><%= guardadas[i].name %></h1>
-                    <a href="">Añade el nombre</a>
+                    <h1><%= guardadas[i].name_colors %></h1>
+                    <% if (! guardadas[i].name_colors) { %>
+                        <a href="/editar-nombre/<%= guardadas[i].id %>">Añade el nombre</a>
+                     
+                    <% } %>
                 </div>
                 <a href="/delete/<%= guardadas[i].id %>" id="borrar"><i class="fa-solid fa-trash"></i></a>
             </div>
