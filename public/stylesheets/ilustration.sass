@@ -1,0 +1,53 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    // border: 1px solid
+    font-family: 'Montserrat', sans-serif
+    text-decoration: none
+
+@mixin flex
+    display: flex
+    align-items: center
+    justify-content: center
+
+#principal
+    background: #e9e8e8
+    @include flex
+    flex-wrap: wrap
+    div
+        @include flex
+        justify-content: space-between
+        flex-direction: column
+        background: #FFFFFF
+        padding-top: 2%
+        border-radius: 20px
+        margin: 2%
+
+        width: 40%
+        height: 450px
+        button
+            border: none
+            margin-top: 5%
+            margin-bottom: 2%
+            display: inline-block
+            padding: 10px 20px
+            background-color: #000000
+            color: #fff
+            font-size: 18px
+            border-radius: 1px
+            transition: background-color 0.3s
+            &:hover 
+                background-color: #125fbd
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3)
+                transform: translateY(-2px)
+                cursor: pointer
+
+@media only screen and (max-width: 767px)
+    #principal div
+        width: 90% !important
+        padding: 8% !important
+
+@media (min-width: 768px) and (max-width: 1023px)
+    #principal div
+        padding: 8% !important

@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="/stylesheets/generar.css">
+
     <!-- Google Fonts Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +16,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="/stylesheets/generar.css">
     <!--  Font awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <!-- Estilo nav -->
@@ -29,12 +30,9 @@
 </head>
 <body>
     <%- include('./partials/nav.ejs') %>
+    <%- include('./partials/nav-colores.ejs') %>
 
     <section id="principal">
-
-        <%- include('./partials/nav-colores.ejs') %>
-        
-         
         <div id="bloque1" style="background: <%= paletaTriada[0] %>d0;">
             <div id="fondo">
                 <div id="texto" style="background: <%= paletaTriada[0] %>;">

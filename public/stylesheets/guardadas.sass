@@ -25,12 +25,19 @@
             font-family: 'Krona One', sans-serif
             padding: 5%
         a
-            border: none
-            text-decoration: none
-            color: #ffffff
-            font-size: 20px
-            background: #000
-            padding: .6rem 1.2rem
+            display: inline-block
+            padding: 10px 20px
+            background-color: #000000
+            color: #fff
+            font-size: 22px
+            border-radius: 1px
+            transition: background-color 0.3s
+            
+            &:hover 
+                background-color: #125fbd
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3)
+                transform: translateY(-2px)
+                cursor: pointer
     .caja
         -webkit-box-shadow: 14px 12px 17px 0px rgba(196,196,196,1)
         -moz-box-shadow: 14px 12px 17px 0px rgba(196,196,196,1)
@@ -57,13 +64,19 @@
                     color: white
         #nombre
             a
-                background: #000
-                color: white
-                padding: .6rem 1.2rem
-                border: none
-                cursor: pointer
-                &:hover
-                    background: #125fbd
+                display: inline-block
+                padding: 10px 20px
+                background-color: #000000
+                color: #fff
+                font-size: 16px
+                border-radius: 1px
+                transition: background-color 0.3s
+                
+                &:hover 
+                    background-color: #125fbd
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3)
+                    transform: translateY(-2px)
+                    cursor: pointer
         #borrar
             i
                 font-size: 28px

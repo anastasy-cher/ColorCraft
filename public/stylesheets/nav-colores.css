@@ -7,7 +7,7 @@
 }
 
 #menu {
-  height: 8%;
+  height: 4rem;
   padding: 0 2rem;
   display: flex;
   align-items: center;
@@ -35,6 +35,13 @@
   height: 38px;
   width: 41px;
   border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+#menu #colores .caja .circle:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
   cursor: pointer;
 }
 #menu #colores .caja .info {
@@ -76,22 +83,30 @@
   justify-content: end;
 }
 #menu a {
-  padding-right: 50%;
+  padding-right: 40%;
 }
 #menu a i {
   color: #ff0000;
   font-size: 34px;
 }
-#menu #boton {
-  background: #000;
-  color: white;
-  padding: 0.6rem 1.4rem;
-  border: none;
+#menu a i:hover {
+  transform: translateY(-2px);
   cursor: pointer;
-  font-size: 20px;
+}
+#menu #boton {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #000000;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 1px;
+  transition: background-color 0.3s;
 }
 #menu #boton:hover {
-  background: #125fbd;
+  background-color: #125fbd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 767px) {

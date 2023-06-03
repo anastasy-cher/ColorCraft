@@ -61,13 +61,20 @@
   justify-content: space-evenly;
 }
 #principal #rigth #box #buttons #box-buttons a {
-  margin: 1rem;
-  border: none;
-  text-decoration: none;
-  color: #ffffff;
   font-size: 20px;
-  background: #000;
-  padding: 0.6rem 1.2rem;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #000000;
+  color: #fff;
+  border-radius: 1px;
+  transition: background-color 0.3s;
+}
+#principal #rigth #box #buttons #box-buttons a:hover {
+  background-color: #125fbd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+  cursor: pointer;
 }
 #principal #rigth #box #buttons #login {
   font-size: 14px;

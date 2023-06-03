@@ -13,7 +13,7 @@
     justify-content: center
 
 #menu
-    height: 8%
+    height: 4rem
     padding: 0 2rem
     @include flex
     justify-content: end
@@ -34,6 +34,12 @@
           width: 41px
           border-radius: 50%
           cursor: pointer
+          display: inline-block
+          transition: background-color 0.3s
+          &:hover 
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3)
+              transform: translateY(-2px)
+              cursor: pointer
         .info
           background: #ffffff
           z-index: 2
@@ -68,21 +74,28 @@
       @include flex
       justify-content: end
     a
-      padding-right: 50%
+      padding-right: 40%
       i
         color: #ff0000
-        font-size: 34px     
+        font-size: 34px
+        &:hover
+              transform: translateY(-2px)
+              cursor: pointer  
 
         
     #boton
-        background: #000
-        color: white
-        padding: .6rem 1.4rem
-        border: none
-        cursor: pointer
-        font-size: 20px
-        &:hover
-            background: #125fbd
+      display: inline-block
+      padding: 10px 20px
+      background-color: #000000
+      color: #fff
+      font-size: 16px
+      border-radius: 1px
+      transition: background-color 0.3s
+      &:hover 
+          background-color: #125fbd
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3)
+          transform: translateY(-2px)
+          cursor: pointer
 
 @media only screen and (max-width: 767px) 
   #menu

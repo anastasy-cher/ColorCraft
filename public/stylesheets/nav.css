@@ -18,37 +18,44 @@ nav #left {
   align-items: center;
   justify-content: center;
   justify-content: start;
-  width: 78%;
+  width: 58%;
 }
 nav #right {
   display: flex;
   align-items: center;
   justify-content: center;
   justify-content: space-between;
-  width: 22%;
+  width: 42%;
 }
 nav #right .boton {
+  background: #ffffff;
   color: black;
-  font-size: 18px;
-  transition: 0.5s;
+  border: 1px solid #c4c4c4;
 }
 nav #right .boton:hover {
-  background: black;
+  background: #DCC5B8;
   color: white;
 }
 nav #right #user {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 50%;
   justify-content: space-between;
 }
 nav #right #user #nombre {
-  font-size: 18px;
-  transition: 1s;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 1px;
+  transition: background-color 0.3s;
 }
 nav #right #user #nombre:hover {
-  border-bottom: 1px solid green;
+  color: #ffffff;
+  background-color: #E6F4F1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+  cursor: pointer;
 }
 nav #right #user #nombre h4 {
   text-align: left;
@@ -79,14 +86,13 @@ nav #right #user #logout img {
   height: 70%;
 }
 nav #right #acceder {
-  background: #125fbd;
-  color: white;
-  padding: 0.6rem 1.2rem;
-  border: none;
-  cursor: pointer;
+  background: #ffffff;
+  color: black;
+  border: 1px solid #c4c4c4;
 }
 nav #right #acceder:hover {
-  background: #000;
+  background: #DCC5B8;
+  color: white;
 }
 
 nav ul {
@@ -97,12 +103,27 @@ nav ul {
   justify-content: space-between;
 }
 nav ul li {
-  line-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 5px;
 }
 nav ul li a {
-  font-size: 20px;
-  padding: 7px 13px;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 1px;
+  transition: background-color 0.3s;
+  background: #ffffff;
+  color: black;
+  border: 1px solid #c4c4c4;
+}
+nav ul li a:hover {
+  background: #DCC5B8;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+  cursor: pointer;
 }
 
 .checkbtn {
@@ -149,6 +170,8 @@ nav ul li a {
     color: black;
   }
   .boton {
+    border: none !important;
+    border-bottom: 1px solid black !important;
     margin-top: 1rem;
   }
   #acceder {
@@ -193,12 +216,14 @@ nav ul li a {
     margin: 5% 0;
   }
   #check:checked ~ ul li a {
-    border-bottom: 1px solid;
+    border: none;
+    border-bottom: 1px solid black;
   }
   #check:checked ~ ul #acceder {
     background: white;
     color: black;
-    border-bottom: 1px solid;
+    border: none;
+    border-bottom: 1px solid black;
   }
   #check:checked ~ ul #user {
     width: 60%;

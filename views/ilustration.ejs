@@ -4,17 +4,107 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/stylesheets/ilustration.css">
+
+    <!-- Google Fonts Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+
+    <!-- Estilo nav -->
+    <link rel="stylesheet" href="/stylesheets/nav.css">
+    <!-- Estilo nav-colores -->
+    <link rel="stylesheet" href="/stylesheets/nav-colores.css">
+    <!--  Font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <title>Document</title>
 </head>
 <body>
-    <%- include('./partials/somethingwrong.ejs') %>
-    <%- include('./partials/noresults') %>
-    <%- include('./partials/chatbot.ejs') %>
-    <%- include('./partials/pagenotfound.ejs') %>
-    <%- include('./partials/teacher.ejs') %>
+    <%- include('./partials/nav.ejs') %>
+    <%- include('./partials/nav-colores.ejs') %>
 
 
+    <section id="principal">
+        
+        <div>
+            <%- include('./partials/1-visualdata.ejs') %>
+            <button onclick="downloadSvgAsImage('1')">Descargar</button>
+        </div>
+        <div>
+            <%- include('./partials/2-somethingwrong.ejs') %>
+            <button onclick="downloadSvgAsImage('2')">Descargar</button>
+        </div>
+        <div>
+            <%- include('./partials/3-chatbot.ejs') %>
+            <button onclick="downloadSvgAsImage('3')">Descargar</button>
+        </div>
+        <div>
+            <%- include('./partials/4-pagenotfound.ejs') %>
+            <button onclick="downloadSvgAsImage('4')">Descargar</button>
+        </div>
+        <div>
+            <%- include('./partials/5-teacher.ejs') %>
+            <button onclick="downloadSvgAsImage('5')">Descargar</button>
+        </div>
+        <div>
+          <%- include('./partials/6-community.ejs') %>
+          <button onclick="downloadSvgAsImage('6')">Descargar</button>
+        </div>
+        <div>
+          <%- include('./partials/7-planning.ejs') %>
+          <button onclick="downloadSvgAsImage('7')">Descargar</button>
+        </div>
+        <div>
+          <%- include('./partials/8-schedule.ejs') %>
+          <button onclick="downloadSvgAsImage('8')">Descargar</button>
+        </div>
+        <div>
+          <%- include('./partials/9-notfound.ejs') %>
+          <button onclick="downloadSvgAsImage('9')">Descargar</button>
+        </div>
+        <div>
+          <%- include('./partials/10-noresults.ejs') %>
+          <button onclick="downloadSvgAsImage('10')">Descargar</button>
+        </div>
+      </div>
+
+    </section>
 
 
+    <script>
+        function downloadSvgAsImage(x) {
+          //  Elemento SVG
+          const svgElement = document.getElementById('mySvg'+ x);
+    
+          // Creamos una promesa para esperar a que la imagen SVG se cargue
+          const svgPromise = new Promise((resolve, reject) => {
+            const svgXml = new XMLSerializer().serializeToString(svgElement);
+            const img = new Image();
+            img.onload = () => resolve(img);
+            img.onerror = reject;
+            img.src = 'data:image/svg+xml;base64,' + btoa(svgXml);
+          });
+    
+          // Creamos el lienzo de imagen y descarga la imagen PNG
+          svgPromise.then((img) => {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+    
+            canvas.width = 1000;
+            canvas.height = 1000;
+    
+            ctx.drawImage(img, 0, 0);
+    
+            const link = document.createElement('a');
+            link.href = canvas.toDataURL('image/png');
+            link.download = 'image.png';
+    
+            link.click();
+          }).catch((error) => {
+            console.error('Error al cargar la imagen SVG:', error);
+          });
+        }
+      </script>
 </body>
 </html>

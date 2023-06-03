@@ -22,28 +22,35 @@ nav
     #left
         @include flex
         justify-content: start
-        width: 78%
+        width: 58%
     #right
         @include flex
         justify-content: space-between
-        width: 22%
+        width: 42%
         .boton
+            background: #ffffff
             color: black
-            font-size: 18px
-            transition: .5s
-            
+            border: 1px solid #c4c4c4
             &:hover
-                background: black
+                background: #DCC5B8
                 color: white
         #user
             @include flex
-            width: 100%
+            width: 50%
             justify-content: space-between
             #nombre
-                font-size: 18px
-                transition: 1s
-                &:hover
-                    border-bottom: 1px solid green
+                display: inline-block
+                padding: 10px 20px
+                font-size: 16px
+                border-radius: 1px
+                transition: background-color 0.3s
+                
+                &:hover 
+                    color: #ffffff
+                    background-color: #E6F4F1
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3)
+                    transform: translateY(-2px)
+                    cursor: pointer
                 h4
                     text-align: left
                     color: black
@@ -66,24 +73,39 @@ nav
                     width: 70%
                     height: 70%
         #acceder
-            background: #125fbd
-            color: white
-            padding: .6rem 1.2rem
-            border: none
-            cursor: pointer
+            background: #ffffff
+            color: black
+            border: 1px solid #c4c4c4
             &:hover
-                background: #000
+                background: #DCC5B8
+                color: white
+            
 nav
     ul
         width: 100%
         @include flex
         justify-content: space-between
         li
-            line-height: 80px
+            @include flex
+            
             margin: 0 5px
             a
-                font-size: 20px
-                padding: 7px 13px
+                display: inline-block
+                padding: 10px 20px
+                font-size: 16px
+                border-radius: 1px
+                transition: background-color 0.3s
+                background: #ffffff
+                color: black
+                border: 1px solid #c4c4c4
+
+                
+                &:hover
+                    background: #DCC5B8
+                    color: white
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3)
+                    transform: translateY(-2px)
+                    cursor: pointer
 
 .checkbtn
     font-size: 30px
@@ -123,7 +145,9 @@ nav
                 font-size: 26px
                 color: black
 
-    .boton 
+    .boton
+        border: none !important
+        border-bottom: 1px solid black !important
         margin-top: 1rem
     
     #acceder 
@@ -165,11 +189,13 @@ nav
         li
             margin: 5% 0
             a
-                border-bottom: 1px solid
+                border: none
+                border-bottom: 1px solid black
         #acceder
             background: white
             color: black
-            border-bottom: 1px solid
+            border: none
+            border-bottom: 1px solid black
 
         #user
             width: 60%
