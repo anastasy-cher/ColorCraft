@@ -8,12 +8,11 @@ const passport = require('passport')
 // Para cookies(para recibir)
 const express_session = require('express-session')
 
-// const indexRouter = require('./routes/index');
 const userRouter = require('./routes/user');
 
 const app = express();
 
-// Requerimos para haer la conexion, despues de crear la app
+// Requerimos para hacer la conexion, despues de crear la app
 const pool = require("./config/conexion")
 
 // Almacenar cookies en la bd(para guardar)
