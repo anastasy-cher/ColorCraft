@@ -18,14 +18,14 @@ nav #left {
   align-items: center;
   justify-content: center;
   justify-content: start;
-  width: 58%;
+  width: 78%;
 }
 nav #right {
   display: flex;
   align-items: center;
   justify-content: center;
   justify-content: space-between;
-  width: 42%;
+  width: 22%;
 }
 nav #right .boton {
   color: black;
@@ -40,7 +40,7 @@ nav #right #user {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40%;
+  width: 100%;
   justify-content: space-between;
 }
 nav #right #user #nombre {

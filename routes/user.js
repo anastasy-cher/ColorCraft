@@ -32,6 +32,7 @@ router.get('/', function(req, res, next) {
   res.render('inicio.ejs')
 });
 
+
 router.get('/generar', async function(req, res, next) {
 
 // Uso de la función para generar una paleta utilizando la regla de triada
@@ -50,11 +51,9 @@ router.get('/editar-nombre/:id', function(req, res, next) {
   res.render('editar-nombre.ejs',{idpaleta})
 });
 
-router.get('/icons', function(req, res, next) {
-  res.render('icons.ejs')
-});
-router.get('/teoria', function(req, res, next) {
-  res.render('teoria.ejs')
+router.get('/ilustration', function(req, res, next) {
+  const paletaTriada = triada()
+  res.render('ilustration.ejs',{paletaTriada})
 });
 
 router.get("/logout" ,(req,res) =>{

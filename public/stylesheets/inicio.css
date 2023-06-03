@@ -34,12 +34,15 @@
   animation-duration: 1.5s;
   background: #ffffff;
   height: 80%;
-  padding: 2rem;
+  padding: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   justify-content: space-between;
+}
+#principal #rigth #box p {
+  line-height: 32px;
 }
 #principal #rigth #box #buttons {
   width: 100%;
@@ -58,6 +61,7 @@
   justify-content: space-evenly;
 }
 #principal #rigth #box #buttons #box-buttons a {
+  margin: 1rem;
   border: none;
   text-decoration: none;
   color: #ffffff;
